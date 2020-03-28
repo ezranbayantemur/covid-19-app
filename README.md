@@ -1,5 +1,11 @@
 # covid-19-app
 
+<div style="text-align:center">
+<kbd>
+<img src="assets/lnch.png" alt="Kitten" title="A cute kitten" width="120" height="120"/>
+</kbd>
+</div>
+
 Experimental mobile application for tracking status of COVID-19 pandemic.
 
 This application uses [REST Countries v1](https://rapidapi.com/apilayernet/api/rest-countries-v1/details), [COVID-19](https://api-sports.io/documentation/covid-19) API's from [Rapid API](https://rapidapi.com) and creates data statistics with simple visuality for user.
