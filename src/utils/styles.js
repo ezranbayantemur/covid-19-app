@@ -2,8 +2,7 @@ import { Dimensions, Platform, Appearance } from 'react-native'
 
 const
     deviceSize = Dimensions.get('window'),
-    theme = 'dark'
-    // theme = Appearance.getColorScheme()
+    theme = Appearance.getColorScheme()
 
 const
     lightMap = [
