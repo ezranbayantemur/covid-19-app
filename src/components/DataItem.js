@@ -1,18 +1,18 @@
 import React from 'react'
 import moment from 'moment'
 import numeral from 'numeral'
-import { View, Text } from 'react-native'
-require('moment/locale/tr.js');
+import { TouchableOpacity, View, Text } from 'react-native'
+require('moment/locale/tr.js')
 
 import styles from '../utils/styles'
 
-export const DataItem = ({ item }) => {
+export const DataItem = ({ item, onPress }) => {
     return (
-        <View style={styles.dataItem.container}>
+        <TouchableOpacity style={styles.dataItem.container} onPress={onPress}>
             <View style={styles.dataItem.topContainer}>
                 <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                     <Text style={styles.dataItem.countryName}>{item.country.trim()}</Text>
-                    <Text style={styles.dataItem.region}>({item.region})</Text>
+                    <Text style={styles.dataItem.region}>{item.region}</Text>
                     <Text style={styles.dataItem.updateTime}>{moment(item.updateTime).fromNow()}</Text>
                 </View>
 
@@ -40,8 +40,7 @@ export const DataItem = ({ item }) => {
                     <Text style={styles.dataItem.valueNum}>{numeral(item.cases.recovered).format('0,0')}</Text>
                     <Text style={[styles.dataItem.valueNumInfo, { color: 'green' }]}>(%{item.PercentRecovered.toFixed(2)})</Text>
                 </View>
-
             </View>
-        </View>
+        </TouchableOpacity>
     )
 }
