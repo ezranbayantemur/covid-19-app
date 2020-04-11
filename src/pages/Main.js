@@ -11,7 +11,7 @@ import { MainLoader } from '../components/Loader'
 const Main = props => {
 
   const
-    [loading, setLoading] = useState(false),
+    [loading, setLoading] = useState(true),
     [dataList, setDataList] = useState([]),
     { state, dispatch } = useContext(Context),
     [originalList, setOriginalList] = useState([])

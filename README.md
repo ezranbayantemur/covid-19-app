@@ -1,5 +1,9 @@
 # covid-19-app
 
+[![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/Naereen/ama)
+
+[![Generic badge](https://img.shields.io/badge/COVID-19-red.svg)](https://shields.io/)
+
 <div style="text-align:center">
 <kbd>
 <img src="assets/lnch.png" alt="Kitten" title="A cute kitten" width="120" height="120"/>
