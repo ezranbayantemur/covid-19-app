@@ -48,8 +48,9 @@ export async function createList() {
 
 
     //Pulled WORLD data
-    let worldData = { ...covidSum.find(data => data.country === "World") }
+    let worldData = { ...covidSum.find(data => data.country === "All") }
 
+    worldData.country = "World"
     worldData.PercentConfirmed = ((worldData.cases.total * 100) / 6730998923)
     worldData.PercentDeath = ((worldData.deaths.total * 100) / worldData.cases.total)
     worldData.PercentRecovered = ((worldData.cases.recovered * 100) / worldData.cases.total)
