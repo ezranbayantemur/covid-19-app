@@ -30,3 +30,5 @@ It's created for just experimental. You can fork and work with it however you wa
 | ![img-6](assets/s1.PNG '1') | ![img-7](assets/s2.PNG '2') | ![img-8](assets/s3.PNG '3') | ![img-9](assets/s4.PNG '4') | ![img-10](assets/s5.PNG '5') |
  
 ## Any PR will be welcome!
+
+### #beSafe
