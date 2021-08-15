@@ -7,8 +7,8 @@ var
 
 export async function createList() {
     let
-        { data: { response: covidSumData } } = await axios.get("https://covid-193.p.rapidapi.com/statistics", { headers: { "x-rapidapi-host": "covid-193.p.rapidapi.com", "x-rapidapi-key": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" } }),
-        { data: countriesData } = await axios.get("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", { headers: { "x-rapidapi-host": "ajayakv-rest-countries-v1.p.rapidapi.com", "x-rapidapi-key": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" } })
+        { data: { response: covidSumData } } = await axios.get("https://covid-193.p.rapidapi.com/statistics", { headers: { "x-rapidapi-host": "covid-193.p.rapidapi.com", "x-rapidapi-key": "0166bfd020msh2af84d5a89becb9p16e63djsn8256b0c41551" } }),
+        { data: countriesData } = await axios.get("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", { headers: { "x-rapidapi-host": "ajayakv-rest-countries-v1.p.rapidapi.com", "x-rapidapi-key": "0166bfd020msh2af84d5a89becb9p16e63djsn8256b0c41551" } })
 
     covidSum = covidSumData
     countries = countriesData
@@ -84,7 +84,7 @@ export function matchCountry(conName, covName) {
 export async function createDetailData(data) {
 
     let
-        res = await axios.get(`https://covid-193.p.rapidapi.com/history?country=${data.country}`, { headers: { "x-rapidapi-host": "covid-193.p.rapidapi.com", "x-rapidapi-key": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" } }),
+        res = await axios.get(`https://covid-193.p.rapidapi.com/history?country=${data.country}`, { headers: { "x-rapidapi-host": "covid-193.p.rapidapi.com", "x-rapidapi-key": "0166bfd020msh2af84d5a89becb9p16e63djsn8256b0c41551" } }),
         dataList = res.data.response,
         responseList = []
 
