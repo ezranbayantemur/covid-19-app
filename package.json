@@ -20,6 +20,7 @@
     "numeral": "^2.0.6",
     "react": "17.0.2",
     "react-native": "0.64.2",
+    "react-native-config": "^1.4.4",
     "react-native-gesture-handler": "^1.10.3",
     "react-native-linear-gradient": "^2.5.6",
     "react-native-maps": "^0.29.3",
@@ -28,7 +29,8 @@
     "react-native-screens": "^3.6.0",
     "react-native-skeleton-placeholder": "^5.0.0",
     "react-native-svg": "^12.1.1",
-    "react-native-svg-charts": "^5.4.0"
+    "react-native-svg-charts": "^5.4.0",
+    "use-http": "^1.0.24"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
