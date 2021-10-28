@@ -5,8 +5,6 @@ import useStatistic from './hooks/useStatistic';
 function Statistics() {
   const {data} = useStatistic();
 
-  console.log(data);
-
   return <StatisticsScreen />;
 }
 
