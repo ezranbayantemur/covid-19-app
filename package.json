@@ -24,7 +24,7 @@
     "react-native-gesture-handler": "^1.10.3",
     "react-native-linear-gradient": "^2.5.6",
     "react-native-maps": "^0.29.3",
-    "react-native-reanimated": "^2.2.0",
+    "react-native-reanimated": "^2.10.0",
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.6.0",
     "react-native-skeleton-placeholder": "^5.0.0",
