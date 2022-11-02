@@ -1,0 +1,35 @@
+{
+    "language": "tr",
+    "langCode": "tr_TR",
+    "analyze": "Analyze",
+    "world": "World",
+    "search": "Search..",
+    "sort": {
+        "label": "Sort",
+        "sort": [
+            "Case/Population",
+            "Death/Case",
+            "Recovery/Case"
+        ]
+    },
+    "detail": {
+        "legend": [
+            "Case",
+            "Recovery",
+            "Death"
+        ],
+        "chart1": [
+            "Total Recovery",
+            "Total Death"
+        ],
+        "chart2": [
+            "Total Case",
+            "Total Test"
+        ],
+        "daily": "Daily Data",
+        "total": "Total",
+        "rec": "Recovery",
+        "death": "Death",
+        "noTest": "Not any test data found"
+    }
+}

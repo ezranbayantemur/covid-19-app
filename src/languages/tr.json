@@ -1,0 +1,35 @@
+{
+    "language": "tr",
+    "langCode": "tr_TR",
+    "analyze": "Analiz",
+    "world": "Dünya",
+    "search": "Ara..",
+    "sort": {
+        "label": "Sırala",
+        "sort": [
+            "Vaka/Nüfus",
+            "Ölüm/Vaka",
+            "İyileşme/Vaka"
+        ]
+    },
+    "detail": {
+        "legend": [
+            "Vaka",
+            "İyileşen",
+            "Ölüm"
+        ],
+        "chart1": [
+            "Toplam İyileşen",
+            "Toplam Ölüm"
+        ],
+        "chart2": [
+            "Toplam Vaka",
+            "Toplam Test"
+        ],
+        "daily": "Günlük Veri",
+        "total": "Toplam",
+        "rec": "İyileşen",
+        "death": "Ölüm",
+        "noTest": "Test verisi bulunamadı"
+    }
+}
