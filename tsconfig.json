@@ -5,6 +5,11 @@
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
 
     /* Completeness */
-    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
+    "skipLibCheck": true,
+    "baseUrl": ".",                                /* Skip type checking all .d.ts files. */
+    "paths": {
+      "@components": ["src/components"],
+      "@style": ["src/style"]
+    }
   }
 }
