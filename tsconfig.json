@@ -9,7 +9,9 @@
     "baseUrl": ".",                                /* Skip type checking all .d.ts files. */
     "paths": {
       "@components": ["src/components"],
-      "@style": ["src/style"]
+      "@style": ["src/style"],
+      "@types": ["src/types"],
+      "@api": ["src/redux/api"]
     }
   }
 }

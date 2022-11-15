@@ -14,6 +14,9 @@ const Pages: PageType[] = [
     key: Routes.Main.toString(),
     name: Routes.Main,
     component: Main,
+    options: {
+      headerShown: false,
+    },
   },
 ];
 

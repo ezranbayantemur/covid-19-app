@@ -1,6 +1,6 @@
 interface StaticTollBadgeProps {
   color: string;
-  count: number;
+  count: string;
   approximate: number;
 }
 

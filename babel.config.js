@@ -7,6 +7,8 @@ module.exports = {
         alias: {
           '@components': './src/components',
           '@style': './src/style',
+          '@types': './src/types',
+          '@api': './src/redux/api',
         },
       },
     ],

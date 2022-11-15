@@ -1,5 +1,7 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 import {colors, spacing, typography} from '@style';
+
+const deviceSize = Dimensions.get('screen');
 
 export default StyleSheet.create({
   container: {
@@ -8,33 +10,44 @@ export default StyleSheet.create({
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    paddingBottom: spacing.MEDIUM,
+  },
+  right_top_section: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  continent: {
+    marginLeft: spacing.SMALL,
+    fontSize: typography.SMALL,
+    color: colors.DARK_GRAY,
+    fontStyle: 'italic',
+  },
+  country: {
+    maxWidth: deviceSize.width * 0.5,
+    color: colors.BLACK,
+    fontSize: typography.BIG,
+  },
+  time: {
+    marginLeft: spacing.SMALL,
+    fontSize: typography.TINY,
+    color: 'gray',
+    textAlign: 'center',
+  },
+  left_top_section: {
+    flexDirection: 'row',
   },
   footer: {
     paddingVertical: spacing.SMALL,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-  right_top_section: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  left_top_section: {
-    flexDirection: 'row',
-  },
-  country: {
-    fontSize: typography.BIG,
-  },
-  time: {
-    marginLeft: spacing.SMALL,
-    fontSize: typography.SMALL,
-    color: 'gray',
-  },
   death_toll: {
+    color: colors.BLACK,
     fontSize: typography.BIG,
   },
   new_death_toll: {
     color: colors.RED,
-    fontSize: typography.MEDIUM,
+    fontSize: typography.SMALL,
     marginLeft: spacing.SMALL,
   },
 });

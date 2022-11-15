@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {spacing, typography} from '@style';
+import {colors, spacing, typography} from '@style';
 
 export default StyleSheet.create({
   container: {
@@ -12,6 +12,7 @@ export default StyleSheet.create({
     borderRadius: 5,
   },
   count: {
+    color: colors.BLACK,
     marginLeft: spacing.SMALL,
     fontSize: typography.SMALL,
   },
