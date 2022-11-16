@@ -37,17 +37,19 @@ export default StyleSheet.create({
     flexDirection: 'row',
   },
   footer: {
+    flex: 1,
     paddingVertical: spacing.SMALL,
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-evenly',
   },
   death_toll: {
     color: colors.BLACK,
     fontSize: typography.BIG,
+    marginRight: spacing.SMALL,
   },
   new_death_toll: {
     color: colors.RED,
     fontSize: typography.SMALL,
-    marginLeft: spacing.SMALL,
+    marginRight: spacing.SMALL,
   },
 });

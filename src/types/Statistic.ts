@@ -1,7 +1,7 @@
 interface Statistic {
   continent: string;
   country: string;
-  population: number;
+  population: number | null;
   cases: Case;
   deaths: Pick<Case, 'new' | '1M_pop' | 'total'>;
   tests: Pick<Case, '1M_pop' | 'total'>;

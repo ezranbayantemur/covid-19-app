@@ -5,18 +5,18 @@ export default StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-  },
-  dot: {
-    width: 10,
-    height: 10,
+    padding: spacing.TINY,
+    paddingHorizontal: spacing.SMALL,
     borderRadius: 5,
   },
   count: {
-    color: colors.BLACK,
+    color: colors.LIGHT_GRAY,
     marginLeft: spacing.SMALL,
     fontSize: typography.SMALL,
+    fontWeight: 'bold',
   },
   approximate: {
+    color: colors.LIGHT_GRAY,
     marginLeft: spacing.SMALL,
     fontSize: typography.SMALL,
   },

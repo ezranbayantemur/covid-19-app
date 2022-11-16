@@ -3,10 +3,13 @@ import {SafeAreaView, FlatList} from 'react-native';
 import {Statistic} from '@types';
 import {StaticItem, Separator} from '@components';
 import styles from './Main.styles';
-import {useGetAllStatisticsQuery} from '../../redux/api/statisticAPI';
+import {useSelector} from 'react-redux';
+import {StatisticStateProps} from 'src/redux/features/statistic/types';
 
 const Main = () => {
-  const {data: statistics} = useGetAllStatisticsQuery();
+  const {statistics} = useSelector<any, StatisticStateProps>(
+    state => state.statistics,
+  );
 
   const renderStatistic = ({item}: {item: Statistic}) => (
     <StaticItem data={item} />

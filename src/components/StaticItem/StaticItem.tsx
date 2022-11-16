@@ -10,14 +10,15 @@ import StaticItemProps from './types';
 import styles from './StaticItem.styles';
 
 const StaticItem = ({
-  data: {cases, continent, country, deaths, population},
+  data: {cases, continent, country, deaths},
 }: StaticItemProps) => {
   const deathPerCase = deaths.total / cases.total;
-  const casePerPopulation = cases.total / population;
   const recoveryPerCase = cases.recovered / cases.total;
-  const formattedCases = numeral(cases.total).format('0,0');
-  const formattedDeaths = numeral(deaths.total).format('0,0');
-  const formattedRecovered = numeral(cases.recovered).format('0,0');
+
+  const formattedCases = numeral(cases.total).format('0.00 a').toUpperCase();
+  const formattedNewCases = numeral(cases.new).format('0a');
+  const formattedDeaths = numeral(deaths.total).format('0.000a');
+  const formattedRecovered = numeral(cases.recovered).format('0.000a');
 
   return (
     <View style={styles.container}>
@@ -27,18 +28,13 @@ const StaticItem = ({
           {!!continent && <Text style={styles.continent}>({continent})</Text>}
         </View>
         <View style={styles.left_top_section}>
-          <Text style={styles.death_toll}>{formattedCases}</Text>
           {!!cases.new && (
-            <Text style={styles.new_death_toll}>({cases.new})</Text>
+            <Text style={styles.new_death_toll}>(+{formattedNewCases})</Text>
           )}
+          <Text style={styles.death_toll}>{formattedCases}</Text>
         </View>
       </View>
       <View style={styles.footer}>
-        <StaticTollBadge
-          color={colors.ORANGE}
-          count={formattedCases}
-          approximate={casePerPopulation}
-        />
         <StaticTollBadge
           color={colors.RED}
           count={formattedDeaths}

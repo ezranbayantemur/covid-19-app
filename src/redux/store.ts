@@ -1,12 +1,11 @@
 import {configureStore} from '@reduxjs/toolkit';
-import {statisticsApi} from './api/statisticAPI';
+import statisticSlicer from './features/statistic';
 
 const store = configureStore({
   reducer: {
-    [statisticsApi.reducerPath]: statisticsApi.reducer,
+    statistics: statisticSlicer.reducer,
   },
-  middleware: (getDefaultMiddleware: any) =>
-    getDefaultMiddleware().concat(statisticsApi.middleware),
 });
 
+export type AppDispatch = typeof store.dispatch;
 export default store;
