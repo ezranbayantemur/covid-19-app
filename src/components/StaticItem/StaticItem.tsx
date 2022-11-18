@@ -1,9 +1,6 @@
 import React, {memo} from 'react';
 import {View, Text} from 'react-native';
 import numeral from 'numeral';
-import dayjs from 'dayjs';
-import relativeTime from 'dayjs/plugin/relativeTime';
-dayjs.extend(relativeTime);
 import {colors} from '@style';
 import {StaticTollBadge} from '@components';
 import StaticItemProps from './types';

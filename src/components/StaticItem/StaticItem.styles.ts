@@ -27,12 +27,6 @@ export default StyleSheet.create({
     color: colors.BLACK,
     fontSize: typography.BIG,
   },
-  time: {
-    marginLeft: spacing.SMALL,
-    fontSize: typography.TINY,
-    color: 'gray',
-    textAlign: 'center',
-  },
   left_top_section: {
     flexDirection: 'row',
   },

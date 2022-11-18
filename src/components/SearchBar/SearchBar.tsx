@@ -1,14 +1,22 @@
 import React, {useEffect, useState, memo} from 'react';
 import {View, TextInput, Text} from 'react-native';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {useDebouncedCallback} from 'use-debounce';
-import Separator from '../Separator';
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
+dayjs.extend(relativeTime);
+import {Separator} from '@components';
+import {search} from '@features/statistic';
+import {StatisticStateProps} from '@features/statistic/types';
 import styles from './SearchBar.styles';
-import {search} from '../../redux/features/statistic';
 
 const DEBOUNCE_WAIT = 500;
 
 const SearchBar = () => {
+  const {statistics} = useSelector<any, StatisticStateProps>(
+    state => state.statistics,
+  );
+
   const dispatch = useDispatch();
   const [searchValue, setSearchValue] = useState<string | undefined>(undefined);
   const debouncedOnChange = useDebouncedCallback(setSearchValue, DEBOUNCE_WAIT);
@@ -20,6 +28,12 @@ const SearchBar = () => {
 
     dispatch(search(searchValue));
   }, [dispatch, searchValue]);
+
+  const updatedTime =
+    statistics.length > 0 &&
+    !!statistics[0] &&
+    !!statistics[0].time &&
+    dayjs(statistics[0].time).fromNow();
 
   return (
     <View>
@@ -34,9 +48,14 @@ const SearchBar = () => {
         <Text style={styles.death_case_label}>Death D/Case</Text>
         <Text style={styles.recover_case_label}>Recover R/Case</Text>
       </View>
+      {updatedTime && (
+        <Text style={styles.time}>Last data updated {updatedTime}</Text>
+      )}
       <Separator />
     </View>
   );
 };
+
+SearchBar.whyDidYouRender = true;
 
 export default memo(SearchBar);

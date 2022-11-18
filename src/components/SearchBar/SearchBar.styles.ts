@@ -29,4 +29,12 @@ export default StyleSheet.create({
     fontSize: typography.SMALL,
     fontWeight: 'bold',
   },
+  time: {
+    marginLeft: spacing.SMALL,
+    fontSize: typography.SMALL,
+    color: 'gray',
+    textAlign: 'center',
+    fontStyle: 'italic',
+    paddingBottom: spacing.TINY,
+  },
 });

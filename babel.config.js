@@ -8,7 +8,7 @@ module.exports = {
           '@components': './src/components',
           '@style': './src/style',
           '@types': './src/types',
-          '@api': './src/redux/api',
+          '@features': './src/redux/features',
         },
       },
     ],
