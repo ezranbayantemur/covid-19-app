@@ -1,6 +1,6 @@
 import {NativeStackNavigationOptions} from '@react-navigation/native-stack';
 import Routes from '../router/routes';
-import Main from './Main';
+import General from './General';
 
 interface PageType {
   key: string;
@@ -11,9 +11,9 @@ interface PageType {
 
 const Pages: PageType[] = [
   {
-    key: Routes.Main.toString(),
-    name: Routes.Main,
-    component: Main,
+    key: Routes.General.toString(),
+    name: Routes.General,
+    component: General,
     options: {
       headerShown: false,
     },

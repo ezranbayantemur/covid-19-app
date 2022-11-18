@@ -1,5 +1,5 @@
 enum Routes {
-  Main = 'MainScreen',
+  General = 'GeneralScreen',
 }
 
 export default Routes;

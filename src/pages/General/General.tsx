@@ -2,11 +2,11 @@ import React from 'react';
 import {SafeAreaView, FlatList} from 'react-native';
 import {Statistic} from '@types';
 import {StaticItem, Separator, SearchBar} from '@components';
-import styles from './Main.styles';
+import styles from './General.styles';
 import {useSelector} from 'react-redux';
 import {StatisticStateProps} from 'src/redux/features/statistic/types';
 
-const Main = () => {
+const General = () => {
   const {statistics} = useSelector<any, StatisticStateProps>(
     state => state.statistics,
   );
@@ -27,4 +27,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default General;
