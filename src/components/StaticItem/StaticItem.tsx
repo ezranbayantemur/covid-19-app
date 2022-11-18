@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {View, Text} from 'react-native';
 import numeral from 'numeral';
 import dayjs from 'dayjs';
@@ -9,11 +9,13 @@ import {StaticTollBadge} from '@components';
 import StaticItemProps from './types';
 import styles from './StaticItem.styles';
 
+const PERCENT = 100;
+
 const StaticItem = ({
   data: {cases, continent, country, deaths},
 }: StaticItemProps) => {
-  const deathPerCase = deaths.total / cases.total;
-  const recoveryPerCase = cases.recovered / cases.total;
+  const deathPerCase = (deaths.total / cases.total) * PERCENT;
+  const recoveryPerCase = (cases.recovered / cases.total) * PERCENT;
 
   const formattedCases = numeral(cases.total).format('0.00 a').toUpperCase();
   const formattedNewCases = numeral(cases.new).format('0a');
@@ -50,4 +52,4 @@ const StaticItem = ({
   );
 };
 
-export default StaticItem;
+export default memo(StaticItem);

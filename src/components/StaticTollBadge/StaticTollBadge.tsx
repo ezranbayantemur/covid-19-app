@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {View, Text} from 'react-native';
 import styles from './StaticTollBadge.styles';
 import {StaticTollBadgeProps} from './types';
@@ -16,4 +16,4 @@ const StaticTollBadge = ({color, count, approximate}: StaticTollBadgeProps) => {
   );
 };
 
-export default StaticTollBadge;
+export default memo(StaticTollBadge);
