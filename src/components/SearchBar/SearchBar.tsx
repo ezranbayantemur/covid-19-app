@@ -1,22 +1,25 @@
 import React, {useEffect, useState, memo} from 'react';
 import {View, TextInput, Text} from 'react-native';
+import {useDispatch} from 'react-redux';
 import {useDebouncedCallback} from 'use-debounce';
 import Separator from '../Separator';
 import styles from './SearchBar.styles';
+import {search} from '../../redux/features/statistic';
 
 const DEBOUNCE_WAIT = 500;
 
-interface SearchBarProps {
-  onSearch: (value?: string) => void;
-}
-
-const SearchBar = ({onSearch}: SearchBarProps) => {
-  const [search, setSearch] = useState<string>();
-  const debouncedOnChange = useDebouncedCallback(setSearch, DEBOUNCE_WAIT);
+const SearchBar = () => {
+  const dispatch = useDispatch();
+  const [searchValue, setSearchValue] = useState<string | undefined>(undefined);
+  const debouncedOnChange = useDebouncedCallback(setSearchValue, DEBOUNCE_WAIT);
 
   useEffect(() => {
-    onSearch(search);
-  }, [search, onSearch]);
+    if (searchValue === undefined) {
+      return;
+    }
+
+    dispatch(search(searchValue));
+  }, [dispatch, searchValue]);
 
   return (
     <View>
