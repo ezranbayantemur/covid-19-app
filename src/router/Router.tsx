@@ -9,7 +9,10 @@ const Stack = createNativeStackNavigator();
 export default function Router() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}>
         {Pages.map(page => (
           <Stack.Screen {...page} />
         ))}

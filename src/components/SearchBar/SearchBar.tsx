@@ -49,7 +49,7 @@ const SearchBar = () => {
         <Text style={styles.recover_case_label}>Recover R/Case</Text>
       </View>
       {updatedTime && (
-        <Text style={styles.time}>Last data updated {updatedTime}</Text>
+        <Text style={styles.time}>Last update {updatedTime}</Text>
       )}
       <Separator />
     </View>
