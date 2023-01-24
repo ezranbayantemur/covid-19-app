@@ -9,6 +9,7 @@ module.exports = {
           '@style': './src/style',
           '@types': './src/types',
           '@features': './src/redux/features',
+          '@utils': './src/utils',
         },
       },
     ],

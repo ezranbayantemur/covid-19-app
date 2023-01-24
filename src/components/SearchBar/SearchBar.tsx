@@ -45,8 +45,8 @@ const SearchBar = () => {
         />
       </View>
       <View style={styles.footer_container}>
-        <Text style={styles.death_case_label}>Death D/Case</Text>
-        <Text style={styles.recover_case_label}>Recover R/Case</Text>
+        <Text style={styles.death_case_label}>Total Death D/Case</Text>
+        <Text style={styles.recover_case_label}>Total Recover R/Case</Text>
       </View>
       {updatedTime && (
         <Text style={styles.time}>Last update {updatedTime}</Text>

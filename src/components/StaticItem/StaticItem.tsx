@@ -3,6 +3,7 @@ import {View, Text} from 'react-native';
 import numeral from 'numeral';
 import {colors} from '@style';
 import {StaticTollBadge} from '@components';
+import {isSecondary} from '@utils/common';
 import StaticItemProps from './types';
 import styles from './StaticItem.styles';
 
@@ -10,17 +11,22 @@ const PERCENT = 100;
 
 const StaticItem = ({
   data: {cases, continent, country, deaths},
+  index,
 }: StaticItemProps) => {
+  const backgroundColor = isSecondary(index)
+    ? colors.WHITE
+    : colors.SMOKE_WHITE;
+
   const deathPerCase = (deaths.total / cases.total) * PERCENT;
   const recoveryPerCase = (cases.recovered / cases.total) * PERCENT;
 
   const formattedCases = numeral(cases.total).format('0.00 a').toUpperCase();
   const formattedNewCases = numeral(cases.new).format('0a');
-  const formattedDeaths = numeral(deaths.total).format('0.000a');
-  const formattedRecovered = numeral(cases.recovered).format('0.000a');
+  const formattedDeaths = numeral(deaths.total).format('0.00 a');
+  const formattedRecovered = numeral(cases.recovered).format('0.00 a');
 
   return (
-    <View style={styles.container}>
+    <View style={(styles.container, {backgroundColor})}>
       <View style={styles.header}>
         <View style={styles.right_top_section}>
           <Text style={styles.country}>{country}</Text>
