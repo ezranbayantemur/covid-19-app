@@ -29,6 +29,7 @@ export default StyleSheet.create({
   },
   left_top_section: {
     flexDirection: 'row',
+    alignItems: 'center',
   },
   footer: {
     flex: 1,

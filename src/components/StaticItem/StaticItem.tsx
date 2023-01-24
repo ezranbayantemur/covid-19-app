@@ -22,11 +22,11 @@ const StaticItem = ({
 
   const formattedCases = numeral(cases.total).format('0.00 a').toUpperCase();
   const formattedNewCases = numeral(cases.new).format('0a');
-  const formattedDeaths = numeral(deaths.total).format('0.00 a');
-  const formattedRecovered = numeral(cases.recovered).format('0.00 a');
+  const formattedDeaths = numeral(deaths.total).format('0.00a');
+  const formattedRecovered = numeral(cases.recovered).format('0.00a');
 
   return (
-    <View style={(styles.container, {backgroundColor})}>
+    <View style={[styles.container, {backgroundColor}]}>
       <View style={styles.header}>
         <View style={styles.right_top_section}>
           <Text style={styles.country}>{country}</Text>

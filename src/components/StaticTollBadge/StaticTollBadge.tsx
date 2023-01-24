@@ -8,7 +8,7 @@ const FIXED_POINT = 2;
 const StaticTollBadge = ({color, count, approximate}: StaticTollBadgeProps) => {
   return (
     <View style={[styles.container, {backgroundColor: color}]}>
-      <Text style={styles.count}>{count}</Text>
+      <Text style={styles.count}>{count.toUpperCase()}</Text>
       <Text style={styles.approximate}>
         (%{approximate.toFixed(FIXED_POINT)})
       </Text>
